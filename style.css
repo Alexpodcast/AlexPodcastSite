@@ -1,37 +1,92 @@
+/* Global Styles */
+:root {
+    --color-primary: #141414;
+    --color-secondary: #545658;
+    --color-accent: #d24712;
+    --color-background: #fefefe;
+    --color-header: #6a1b9a; /* Purple color for the header */
+    --color-text: #ffffff; /* White text for contrast */
+    --color-button: #fa6400; /* Button color */
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
 }
 
+/* Header with purple background */
 header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+    background-color: var(--color-header);
+    color: var(--color-text);
+    text-align: center;
+    padding: 20px;
+    font-size: 3rem; /* Larger text for visibility */
+    font-weight: bold;
 }
 
-header button {
-  background-color: #ff9800;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+/* Podcast player container */
+.podcast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-background);
 }
 
-header button:hover {
-  background-color: #e67e22;
+/* Podcast info section */
+.podcast-info {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-main {
-  padding: 20px;
+/* Podcast cover image styling */
+.podcast-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+/* Podcast player controls */
+.podcast-player {
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.controls button {
+    padding: 10px 20px;
+    background-color: var(--color-button);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.controls button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header {
+        font-size: 1.8rem;
+    }
 }
