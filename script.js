@@ -1,33 +1,52 @@
-// Sample podcast episodes
-const episodes = [
-    { title: "Episode 1: The Journey Begins", description: "Our very first episode!", audio: "episode1.mp3" },
-    { title: "Episode 2: Overcoming Challenges", description: "How to tackle life's obstacles.", audio: "episode2.mp3" },
-    { title: "Episode 3: Building Connections", description: "The power of networking.", audio: "episode3.mp3" }
-];
+// Toggle the About Us section visibility
+document.getElementById('aboutUsBtn').addEventListener('click', function() {
+    const introSection = document.getElementById('intro');
+    if (introSection.style.display === 'none' || introSection.style.display === '') {
+        introSection.style.display = 'block'; // Show the intro text
+    } else {
+        introSection.style.display = 'none'; // Hide the intro text
+    }
+});
 
-// Function to display episodes
-function loadEpisodes() {
+// Load podcast episodes dynamically
+document.addEventListener('DOMContentLoaded', function() {
     const episodeList = document.getElementById('episodeList');
 
+    // Sample podcast episode data (replace with actual episode info if needed)
+    const episodes = [
+        { title: "Episode 1: Inspiring Story", videoUrl: "https://www.youtube.com/embed/oga6APt4Xcs" },
+        { title: "Episode 2: Overcoming Challenges", videoUrl: "https://www.youtube.com/embed/FJJxmfOatRI" },
+        { title: "Episode 3: Building Connections", videoUrl: "https://www.youtube.com/embed/6fS5KFJcguM" }
+    ];
+
+    // Loop through the episodes array and create elements for each episode
     episodes.forEach(episode => {
         const episodeDiv = document.createElement('div');
         episodeDiv.classList.add('episode');
         episodeDiv.innerHTML = `
-      <h3>${episode.title}</h3>
-      <p>${episode.description}</p>
-      <audio controls>
-        <source src="${episode.audio}" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    `;
+            <h3>${episode.title}</h3>
+            <iframe width="560" height="315" src="${episode.videoUrl}" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        `;
         episodeList.appendChild(episodeDiv);
     });
-}
 
-// Handle "Listen to Latest Episode" button
-document.getElementById('latestEpisodeBtn').addEventListener('click', () => {
-    alert(`Now playing: ${episodes[0].title}`);
+    // Hide the introduction text by default
+    const introSection = document.getElementById('intro');
+    introSection.style.display = 'none'; // Hide intro text initially
 });
 
-// Load episodes when the page loads
-document.addEventListener('DOMContentLoaded', loadEpisodes);
+// Handle search functionality (this is just a placeholder for now)
+document.getElementById('searchBar').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const episodes = document.querySelectorAll('.episode h3');
+    episodes.forEach(episode => {
+        const title = episode.textContent.toLowerCase();
+        if (title.includes(query)) {
+            episode.parentElement.style.display = 'block';
+        } else {
+            episode.parentElement.style.display = 'none';
+        }
+    });
+});

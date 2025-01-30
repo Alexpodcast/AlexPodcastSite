@@ -1,43 +1,93 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex's Podcast</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
+    <!-- Header with search and buttons -->
     <header>
-        <h1>Alex's Podcast</h1>
-        <p>Inspiring stories delivered to you!</p>
-
-        <!-- Button linking to YouTube -->
-        <a href="http://www.youtube.com/@Alex.Podcast.E" target="_blank">
-            <button id="latestEpisodeBtn">Tap here</button>
-        </a>
+        <div class="header-container">
+            <input type="text" id="searchBar" placeholder="Search..." class="search-bar">
+            <h1>Alex's Podcast</h1>
+            <p>The World of Podcasts Awaits You"
+                Dive into a universe of endless possibilities—from the latest news and hilarious comedy to gripping true crime stories, thrilling sports coverage, and everything in between. Explore, learn, and discover your next favorite episode today!</p>
+            <button id="latestEpisodeBtn" class="btn">Listen to Latest Episode</button>
+        </div>
     </header>
 
+    <!-- Category Buttons after the header -->
+    <section id="categories" class="category-buttons">
+        <a href="https://example.com/arts" target="_blank"><button class="category-btn">Arts</button></a>
+        <a href="https://example.com/business" target="_blank"><button class="category-btn">Business</button></a>
+        <a href="https://example.com/comedy" target="_blank"><button class="category-btn">Comedy</button></a>
+        <a href="https://example.com/education" target="_blank"><button class="category-btn">Education</button></a>
+        <a href="https://example.com/fiction" target="_blank"><button class="category-btn">Fiction</button></a>
+        <a href="https://example.com/government" target="_blank"><button class="category-btn">Government</button></a>
+        <a href="https://example.com/health" target="_blank"><button class="category-btn">Health & Fitness</button></a>
+        <a href="https://example.com/history" target="_blank"><button class="category-btn">History</button></a>
+        <a href="https://example.com/kids-family" target="_blank"><button class="category-btn">Kids & Family</button></a>
+        <a href="https://example.com/leisure" target="_blank"><button class="category-btn">Leisure</button></a>
+        <a href="https://example.com/music" target="_blank"><button class="category-btn">Music</button></a>
+        <a href="https://example.com/news" target="_blank"><button class="category-btn">News</button></a>
+        <a href="https://example.com/religion" target="_blank"><button class="category-btn">Religion & Spirituality</button></a>
+        <a href="https://example.com/science" target="_blank"><button class="category-btn">Science</button></a>
+        <a href="https://example.com/society-culture" target="_blank"><button class="category-btn">Society & Culture</button></a>
+        <a href="https://example.com/sports" target="_blank"><button class="category-btn">Sports</button></a>
+        <a href="https://example.com/technology" target="_blank"><button class="category-btn">Technology</button></a>
+        <a href="https://example.com/true-crime" target="_blank"><button class="category-btn">True Crime</button></a>
+        <a href="https://example.com/tv-film" target="_blank"><button class="category-btn">TV & Film</button></a>
+    </section>
+
+    <!-- About Us Section (hidden by default) -->
+    <aside id="intro">
+        <h2>About Us</h2>
+        <p>Welcome to Alex Podcast, your go-to destination for learning and mastering English! Whether you’re a beginner, intermediate, or advanced learner, this podcast is designed to help you improve your English skills in a fun and engaging way.</p>
+        <p>Each episode focuses on practical topics like vocabulary, grammar, pronunciation, and real-life conversations, ensuring you gain confidence in speaking and understanding English.</p>
+    </aside>
+
+    <!-- Podcast Episodes -->
     <main>
         <section id="episodes">
             <h2>Episodes</h2>
             <div id="episodeList">
-                <!-- Embedded YouTube links -->
                 <div class="episode">
-                    <h3>Episode 1: Inspiring Story</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oga6APt4Xcs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="episode">
-                    <h3>Episode 2: Motivational Insights</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FJJxmfOatRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="episode">
-                    <h3>Episode 3: Achieving Your Dreams</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6fS5KFJcguM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Play it Now: Episode 1</h3>
+                    <button class="play-now-btn" onclick="window.location.href='https://www.youtube.com/watch?v=oga6APt4Xcs'">Play it Now</button>
+                    <button class="play-now-btn" onclick="window.location.href='https://www.youtube.com/watch?v=FJJxmfOatRI'">Play it Now</button>
+                    <button class="play-now-btn" onclick="window.location.href='https://www.youtube.com/watch?v=6fS5KFJcguM'">Play it Now</button>
                 </div>
             </div>
         </section>
+
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/share/14sDmtnqx9/" target="_blank">
+                <img src="facebook-logo.png" alt="Facebook" class="social-logo">
+            </a>
+            <a href="https://www.tiktok.com/@welcometo.alex1?_t=ZS-8tL9onV2gqK&_r=1" target="_blank">
+                <img src="tiktok-logo.png" alt="TikTok" class="social-logo">
+            </a>
+        </div>
+
+        <!-- App Download Links -->
+        <div class="app-download">
+            <a href="https://apps.apple.com" target="_blank">
+                <img src="app-store-logo.png" alt="Download on the App Store" class="store-logo">
+            </a>
+            <a href="https://play.google.com/store" target="_blank">
+                <img src="google-play-logo.png" alt="Get it on Google Play" class="store-logo">
+            </a>
+        </div>
+
+        <!-- Subscribe and Contact Buttons -->
+        <div class="buttons">
+            <button class="btn" onclick="toggleIntro()">About Us</button>
+            <button class="btn">Contact</button>
+        </div>
     </main>
 
     <footer>
@@ -48,7 +98,22 @@
         <p>Contact: welcometo.alex01@gmail.com</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        // Toggle intro visibility
+        function toggleIntro() {
+            const introSection = document.getElementById('intro');
+            if (introSection.style.display === 'none' || introSection.style.display === '') {
+                introSection.style.display = 'block';
+            } else {
+                introSection.style.display = 'none';
+            }
+        }
 
+        // Load episodes
+        document.addEventListener('DOMContentLoaded', () => {
+            const introSection = document.getElementById('intro');
+            introSection.style.display = 'none'; // Hide intro text by default
+        });
+    </script>
+</body>
 </html>

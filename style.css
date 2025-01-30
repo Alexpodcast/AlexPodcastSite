@@ -1,16 +1,12 @@
 /* Global Styles */
-
 :root {
     --color-primary: #141414;
     --color-secondary: #545658;
     --color-accent: #d24712;
-    --color-background: #fefefe;
+    --color-background: #f1dbdb;
     --color-header: #921b9a;
-    /* Purple color for the header */
     --color-text: #ffffff;
-    /* White text for contrast */
-    --color-button: #fa6400;
-    /* Button color */
+    --color-button: #efe6e0;
 }
 
 body {
@@ -21,89 +17,141 @@ body {
     padding: 0;
 }
 
-
 /* Header with purple background */
-
 header {
     background-color: var(--color-header);
     color: var(--color-text);
     text-align: center;
     padding: 20px;
+}
+
+header h1 {
     font-size: 3rem;
-    /* Larger text for visibility */
-    font-weight: bold;
 }
 
+header p {
+    font-size: 1.2rem;
+}
 
-/* Podcast player container */
-
-.podcast-container {
+/* Category Buttons */
+.category-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--color-background);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
-
-/* Podcast info section */
-
-.podcast-info {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-/* Podcast cover image styling */
-
-.podcast-cover {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-
-/* Podcast player controls */
-
-.podcast-player {
-    margin-bottom: 20px;
-}
-
-
-/* Button styling */
-
-.controls button {
+.category-btn {
     padding: 10px 20px;
-    background-color: var(--color-button);
-    color: var(--color-text);
+    background-color: var(--color-accent);
+    color: #e2d0d0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
 }
 
-.controls button:hover {
-    background-color: var(--color-accent);
+.category-btn:hover {
+    background-color: #b85cff;
 }
 
+/* About Us Section */
+#intro {
+    display: none;
+    padding: 20px;
+    background-color: #f2dcdc;
+    border-radius: 5px;
+}
 
-/* Responsive design */
+/* Play it Now Button */
+.play-now-btn {
+    background-color: var(--color-accent);
+    color: #e4d6d6;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
 
+.play-now-btn:hover {
+    background-color: #b85cff;
+}
+
+/* Social Media and Store Logos */
+.social-media-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 50px;
+    margin: 0 15px;
+}
+
+.app-download {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.store-logo {
+    width: 180px; /* Wider for better visibility */
+    margin: 0 15px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    padding: 10px 20px;
+    background-color: var(--color-accent);
+    color: #e0cece;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    background-color: #b85cff;
+}
+
+.search-bar {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ecc9c9;
+    width: 250px;
+    margin: 20px 0;
+}
+
+/* Episode Flex Layout */
+#episodeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.episode {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 1rem;
+    .category-btn {
+        width: 45%;
     }
-    header {
-        font-size: 2.5rem;
+
+    .play-now-btn {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 0.9rem;
-    }
-    header {
-        font-size: 1.8rem;
+    .category-btn {
+        width: 100%;
     }
 }
